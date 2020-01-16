@@ -1,0 +1,56 @@
+@import "../b2b/B2B/front-components/src/assets/styles/common/variables";
+
+$container: 600px;
+$logo: 130px;
+$font-large: 14px;
+$font-small: 12px;
+
+a {
+  color: $primary;
+}
+
+.email-container {
+  max-width: $container;
+  margin: 0 auto;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-weight: 200;
+}
+
+.email-content {
+  max-width: $container;
+  font-size: $font-large;
+}
+
+.email-header {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: $font-small;
+  min-height: 50px;
+
+  &-left {
+    float: left;
+    width: $container / 2;
+    max-width: $container / 2;
+  }
+
+  &-right {
+    float: right;
+    width: $container / 2;
+    max-width: $container / 2;
+  }
+}
+
+.email-logo {
+  width: 100%;
+  max-width: $logo;
+  height: auto;
+}
+
+.email-footer {
+  background: $secondary;
+  min-height: 40px;
+  font-size: $font-small;
+  color: $gray-100;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
