@@ -1,6 +1,5 @@
-// Set domain for saved images
-
-var imagePathUrl = 'http://pornhub.com/site/images/';
+// Set domain url for email images
+var imagePathUrl = '';
 
 // Generate dummy content
 var EmailContent;
@@ -9,7 +8,6 @@ var EmailContent;
   EmailContent = function () {
     this.type = null;
     this.query = null;
-    this.data = null;
   };
   EmailContent.IMAGE = 1;
   EmailContent.TEXT = 2;
@@ -79,21 +77,10 @@ var EmailContent;
       if (this.type == EmailContent.TEXT)
         element.innerHTML += lorem;
       else if (this.type == EmailContent.IMAGE) {
-        //TODO: for now, using lorempixel.
         var path = '';
         var options = this.query.split(' ');
-        if (options[0] == 'gray') {
-          path += '/g';
-          options.shift(); // Remove first element.
-        }
-        if (element.getAttribute('width'))
-          path += '/' + element.getAttribute('width');
-
-        if (element.getAttribute('height'))
-          path += '/' + element.getAttribute('height');
-
         path += '/' + options.join(' ');
-        element.src = 'http://lorempixel.com' + path;
+        element.src = imagePathUrl + path;
       }
     }
 
