@@ -1,12 +1,31 @@
 @import "../b2b/B2B/front-components/src/assets/styles/common/variables";
 
 $container: 600px;
+$margin: 10px;
+$grid-column: $container / 2 -$margin;
 $logo: 130px;
 $font-large: 14px;
 $font-small: 12px;
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: $primary;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: $margin;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $font-large;
 }
 
 .email-container {
@@ -19,6 +38,7 @@ a {
 .email-content {
   max-width: $container;
   font-size: $font-large;
+  display: inline-block;
 }
 
 .email-header {
@@ -26,17 +46,19 @@ a {
   margin-bottom: 50px;
   font-size: $font-small;
   min-height: 50px;
+}
 
+.grid {
   &-left {
     float: left;
-    width: $container / 2;
-    max-width: $container / 2;
+    width: $grid-column;
+    max-width: $grid-column;
   }
 
   &-right {
     float: right;
-    width: $container / 2;
-    max-width: $container / 2;
+    width: $grid-column;
+    max-width: $grid-column;
   }
 }
 
@@ -51,6 +73,15 @@ a {
   min-height: 40px;
   font-size: $font-small;
   color: $gray-100;
-  padding: 10px 15px;
-  margin-top: 20px;
+  padding: $margin $margin * 1.2;
+  margin-top: $margin * 2;
+}
+
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-right {
+    text-align: right;
+  }
 }
