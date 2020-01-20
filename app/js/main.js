@@ -27,7 +27,7 @@ var EmailContent;
       case EmailContent.TYPE.PARAGRAPH:
         var paragraphs = [];
         for (var i = 0; i < count; i++) {
-          var paragraphLength = this.randomInt(1, 2);
+          var paragraphLength = this.randomInt(10, 20);
           var paragraph = this.createText(paragraphLength, EmailContent.TYPE.SENTENCE);
           paragraphs.push('<p>' + paragraph + '</p>');
         }
@@ -35,7 +35,7 @@ var EmailContent;
       case EmailContent.TYPE.SENTENCE:
         var sentences = [];
         for (var i = 0; i < count; i++) {
-          var sentenceLength = this.randomInt(20, 2);
+          var sentenceLength = this.randomInt(5, 10);
           var words = this.createText(sentenceLength, EmailContent.TYPE.WORD).split(' ');
           words[0] = words[0].substr(0, 1).toUpperCase() + words[0].substr(1);
           var sentence = words.join(' ');
