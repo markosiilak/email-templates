@@ -3,3 +3,4 @@ node_modules
 _email-html
 /.idea/
 /app/css/
+package-lock.json
