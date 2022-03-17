@@ -3,6 +3,8 @@
 ### Install
 
 - Run the `npm install`
+- Build html `npm run build`
+- Build inline html for email `npm run email`
 
 ## Build email template
 - Duplicate index.html for new template
